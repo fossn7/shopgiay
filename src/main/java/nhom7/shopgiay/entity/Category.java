@@ -22,11 +22,6 @@ public class Category implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date created;
 
-	@Column(name = "id_account")
-	private long idAccount;
-
-	private String images;
-
 	private String name;
 
 	// bi-directional many-to-many association to Product
@@ -50,22 +45,6 @@ public class Category implements Serializable {
 
 	public void setCreated(Date created) {
 		this.created = created;
-	}
-
-	public long getIdAccount() {
-		return idAccount;
-	}
-
-	public void setIdAccount(long idAccount) {
-		this.idAccount = idAccount;
-	}
-
-	public String getImages() {
-		return images;
-	}
-
-	public void setImages(String images) {
-		this.images = images;
 	}
 
 	public String getName() {

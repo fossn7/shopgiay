@@ -32,7 +32,7 @@ public class ApplicationStartListener implements ApplicationListener<ContextRefr
 		try {
 			accountRepository.save(admin);
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("ERROR: " + e.getMessage());
 		}
 	}
 
