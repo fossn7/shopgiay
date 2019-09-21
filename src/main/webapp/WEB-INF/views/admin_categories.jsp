@@ -106,7 +106,12 @@
 													pattern="dd/MM/yyyy : HH:mm:ss" />
 											</td>
 											<td>
-												<a class="btn btn-danger">Xóa</a>
+												<form method="post"
+													action="${pageContext.request.contextPath }/admin/categories/delete">
+													<input type="hidden" name="id" value="${c.id }">
+													<button class="btn btn-danger">Xóa</button>
+												</form>
+
 											</td>
 											<td>
 												<a class="btn btn-warning">Sửa</a>

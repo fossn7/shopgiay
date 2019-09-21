@@ -32,6 +32,7 @@ public class CategoryController {
 	public String add(@RequestParam("name") String name, RedirectAttributes re) {
 		StatusMessage sm = new StatusMessage();
 		try {
+			System.out.println(name);
 			Category cat = new Category();
 			cat.setName(name);
 			cat.setCreated(new Date(System.currentTimeMillis()));

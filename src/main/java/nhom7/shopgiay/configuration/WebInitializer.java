@@ -1,5 +1,7 @@
 package nhom7.shopgiay.configuration;
 
+import javax.servlet.Filter;
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -20,6 +22,11 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 	protected String[] getServletMappings() {
 		// TODO Auto-generated method stub
 		return new String[] { "/" };
+	}
+
+	@Override
+	protected Filter[] getServletFilters() {
+		return new Filter[] { new EncodingFilter() };
 	}
 
 }
