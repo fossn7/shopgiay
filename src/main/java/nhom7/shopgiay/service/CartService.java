@@ -18,7 +18,7 @@ public class CartService {
 	@Autowired
 	public CartItemRepository cartItemRepository;
 
-	public List<CartItem> getListCart(long id) {
+	public List<CartItem> getListCartByUserId(long id) {
 		return cartItemRepository.getListCart(id);
 	}
 
